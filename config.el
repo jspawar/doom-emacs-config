@@ -20,6 +20,11 @@
 ;; have projectile cache periodically to support new files added to project
 ;; (setq projectile-files-cache-expire 10)
 
+;; get flycheck highlighting to work in terminal (can't do underlines in terminal)
+(set-face-attribute 'flycheck-error nil :background "color-160")
+(set-face-attribute 'flycheck-warning nil :background "#ECBE7B")
+(set-face-attribute 'flycheck-info nil :background "#A3BE8C")
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "John Doe"
