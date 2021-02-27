@@ -17,8 +17,6 @@
 
 ;; disable projectile caching so new files can be found
 (setq projectile-enable-caching nil)
-;; have projectile cache periodically to support new files added to project
-;; (setq projectile-files-cache-expire 10)
 
 ;; get flycheck highlighting to work in terminal (can't do underlines in terminal)
 (set-face-attribute 'flycheck-error nil :background "color-160")
