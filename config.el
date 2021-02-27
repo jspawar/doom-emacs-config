@@ -48,7 +48,11 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-spacegrey)
 
+;; Open dired when switching to a project
 (setq +workspaces-switch-project-function 'dired)
+
+;; Open dired at current directory when opening emacs
+(setf initial-buffer-choice (lambda () (dired (getenv "PWD"))))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
