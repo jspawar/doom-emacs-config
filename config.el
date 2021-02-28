@@ -19,9 +19,9 @@
 (setq projectile-enable-caching nil)
 
 ;; get flycheck highlighting to work in terminal (can't do underlines in terminal)
-(set-face-attribute 'flycheck-error nil :background "color-160")
-(set-face-attribute 'flycheck-warning nil :background "#ECBE7B")
-(set-face-attribute 'flycheck-info nil :background "#A3BE8C")
+(custom-set-faces! `(flycheck-error :background "color-160"))
+(custom-set-faces! `(flycheck-warning :background "#ECBE7B"))
+(custom-set-faces! `(flycheck-info :background "#A3BE8C"))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
