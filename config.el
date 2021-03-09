@@ -15,6 +15,9 @@
 ;; vim-vinegar-esque binding
 (map! :n "-" #'dired-jump)
 
+;; Re-enable `C-i' being move forward
+(map! :n "C-i" #'better-jumper-jump-forward)
+
 ;; disable projectile caching so new files can be found
 (setq projectile-enable-caching nil)
 
@@ -44,7 +47,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-spacegrey)
+(setq doom-theme 'doom-gruvbox)
 
 ;; Open dired when switching to a project
 (setq +workspaces-switch-project-function 'dired)
