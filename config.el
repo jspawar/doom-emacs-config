@@ -53,7 +53,7 @@
 (setq +workspaces-switch-project-function 'dired)
 
 ;; Open dired at current directory when opening emacs
-(setq initial-buffer-choice (lambda () (dired (getenv "PWD"))))
+(setq initial-buffer-choice nil)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
