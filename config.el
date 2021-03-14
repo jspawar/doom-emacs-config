@@ -55,6 +55,10 @@
 ;; Open dired at current directory when opening emacs
 (setq initial-buffer-choice nil)
 
+;; Enable lsp-ui-doc-mode by default
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
