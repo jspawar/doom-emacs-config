@@ -59,9 +59,14 @@
 (after! lsp-ui
   (setq lsp-ui-doc-enable t))
 
+;; TODO: remove after figuring out what's wrong with solargraph + lsp-mode
+(after! lsp-ui
+  (setq lsp-log-io t))
+
 ;; Configure files to use to detect project root
 (after! projectile
   (add-to-list 'projectile-project-root-files-bottom-up "go.mod"))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
