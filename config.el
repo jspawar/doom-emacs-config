@@ -2,12 +2,20 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+
 ;; arrow key navigation for windows
 (map! :map evil-window-map
       "<up>" #'evil-window-up
       "<down>" #'evil-window-down
       "<left>" #'evil-window-left
       "<right>" #'evil-window-right)
+
+;; arrow key and bracket navigation for tabs
+(map! :map evil-normal-state-map
+      "g <left>" #'+tabs:previous-or-goto
+      "g <right>" #'+tabs:next-or-goto
+      "g [" #'+tabs:previous-or-goto
+      "g ]" #'+tabs:next-or-goto)
 
 ;; expand-region (visual-mode only)
 (map! :v "+" #'er/expand-region)
@@ -77,6 +85,10 @@
 
 ;; Allows for full support of `.dir-locals.el'
 (setq-default enable-local-variables t)
+
+;; TODO: `setq' or `setq-default'?
+(setq gcmh-high-cons-threshold 134217728)
+(setq read-process-output-max (* 4 1024 1024))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
