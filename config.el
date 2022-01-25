@@ -17,6 +17,16 @@
       "g [" #'+tabs:previous-or-goto
       "g ]" #'+tabs:next-or-goto)
 
+;; arrow key navigation for workspaces
+(map! :map doom-leader-workspace-map
+      "<left>" #'+workspace/switch-left
+      "<right>" #'+workspace/switch-right)
+
+;; arrow key navigation for buffers
+(map! :map doom-leader-buffer-map
+      "<left>" #'previous-buffer
+      "<right>" #'next-buffer)
+
 ;; expand-region (visual-mode only)
 (map! :v "+" #'er/expand-region)
 
